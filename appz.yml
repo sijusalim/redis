@@ -20,4 +20,9 @@ volumes:
     name: data
     size: 10Gi
 properties:
+    REDIS_DEFAULT_PASSWD:
+       vault: REDISDEFAULTPASSWD
+    REDIS_USER_NAME: APPZ
+    REDIS_USER_PASSWD: 
+       vault: REDISPASSWD
     revision : 15
