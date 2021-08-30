@@ -1,24 +1,27 @@
 app:
     name: Redis
     code: REDIS
-    notify: eachakala@ecloudcontrol.com
+    notify: appz@ecloudcontrol.com
 build:
     version: 6.2
     env: DEV
     build_file: none
     output_files: output/*.zip
     image_template: redis-6.2
+    
 deploy:
-    context: eeshaachakala1/DEV
+    context: alpha/DEV
     replicas: 1
     type: statefulset
     port:
     - 6379
+    
 volumes:
   - claim: redis-data
     mount: /data
     name: data
     size: 10Gi
+    
 properties:
     REDIS_DEFAULT_PASSWD:
        vault: REDISDEFAULTPASSWD
