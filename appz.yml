@@ -1,7 +1,7 @@
 app:
     name: Redis
     code: REDIS
-    notify: appz@ecloudcontrol.com
+    notify: ssalim@ecloudcontrol.com
 build:
     version: 6.2
     env: DEV
@@ -10,7 +10,7 @@ build:
     image_template: redis-6.2
     
 deploy:
-    context: alpha/DEV
+    context: sijusalim/DEV
     replicas: 1
     type: statefulset
     port:
@@ -28,4 +28,4 @@ properties:
     REDIS_USER_NAME: APPZ
     REDIS_USER_PASSWD: 
        vault: REDISPASSWD
-    revision : 16
+    revision : 17
