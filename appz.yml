@@ -11,10 +11,11 @@ build:
     
 deploy:
     context: sijusalim/DEV
-    replicas: 1
+    replicas: 3
     type: statefulset
     port:
     - 6379
+    - 9121
     
 volumes:
   - claim: redis-data
@@ -28,4 +29,4 @@ properties:
     REDIS_USER_NAME: APPZ
     REDIS_USER_PASSWD: 
        vault: REDISPASSWD
-    revision : 17
+    revision : 21
