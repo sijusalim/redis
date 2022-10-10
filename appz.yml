@@ -11,7 +11,7 @@ build:
     
 deploy:
     context: sijusalim/DEV
-    replicas: 3
+    replicas: 1
     type: statefulset
     port:
     - 6379
@@ -29,4 +29,4 @@ properties:
     REDIS_USER_NAME: APPZ
     REDIS_USER_PASSWD: 
        vault: REDISPASSWD
-    revision : 22
+    revision : 23
